@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Water Quest</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <header class="game-header">
+      <picture class="brand-logo">
+        <source media="(max-width: 40rem)" srcset="img/cw_logo.png">
+        <img src="img/cw_logo_horizontal.png" alt="charity: water">
+      </picture>
+      <h1>Water Quest</h1>
+      <p class="game-instructions">Collect 20 or more water cans to complete the game!</p>
+    </header>
+
+    <section class="game-status" aria-label="Game status">
+      <p>Cans Collected: <span id="current-cans">0</span></p>
+      <p>Time Left: <span id="timer">30s</span></p>
+    </section>
+
+    <section class="game-area" aria-labelledby="game-heading">
+      <h2 id="game-heading" class="visually-hidden">Water can collection game</h2>
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+      <div class="game-grid"></div>
+    </section>
+
+    <footer class="game-controls">
+      <button id="start-game" type="button">Start Game</button>
+      <button id="reset-game" type="button">Reset Game</button>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
