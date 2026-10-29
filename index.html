@@ -14,12 +14,24 @@
         <img src="img/cw_logo_horizontal.png" alt="charity: water">
       </picture>
       <h1>Water Quest</h1>
-      <p class="game-instructions">Collect 20 or more water cans to complete the game!</p>
+      <p id="game-instructions" class="game-instructions">
+        Choose a difficulty and collect enough water cans to complete the game!
+      </p>
     </header>
 
     <section class="game-status" aria-label="Game status">
       <p>Cans Collected: <span id="current-cans">0</span></p>
       <p>Time Left: <span id="timer">30s</span></p>
+    </section>
+
+    <section class="difficulty-selector" aria-labelledby="difficulty-heading">
+      <h2 id="difficulty-heading">Choose your difficulty</h2>
+      <label for="difficulty">Game difficulty</label>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
     </section>
 
     <section class="game-area" aria-labelledby="game-heading">
@@ -28,11 +40,29 @@
       <div class="game-grid"></div>
     </section>
 
-    <footer class="game-controls">
+    <section class="game-controls" aria-label="Game controls">
       <button id="start-game" type="button">Start Game</button>
       <button id="reset-game" type="button">Reset Game</button>
-    </footer>
+    </section>
+
+    <section class="milestones" aria-labelledby="milestones-heading">
+      <h2 id="milestones-heading">Milestones</h2>
+      <p id="milestones-empty">Your achievements will appear here as you play.</p>
+      <ul id="milestone-list"></ul>
+    </section>
   </main>
+  <footer class="site-footer">
+    <a class="footer-logo" href="https://www.charitywater.org/" target="_blank" rel="noopener noreferrer">
+      <img src="img/cw_logo_horizontal.png" alt="charity: water home">
+    </a>
+    <p>
+      Learn more about charity: water and how you can help bring clean water to
+      people around the world.
+    </p>
+    <a class="footer-link" href="https://www.charitywater.org/" target="_blank" rel="noopener noreferrer">
+      Visit charity: water
+    </a>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
